@@ -1,0 +1,44 @@
+.slide img {
+	width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	object-position: center;
+}
+.slide.active {
+	display: block;
+}
+
+.slide {
+	display: none;
+}
+
+.posizione {
+	position: relative;
+}
+.posizione .arrow-general {
+	position: absolute;
+	font-size: 40px;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.posizione .arrow-general.arrow-left {
+	left: 20px;
+}
+
+.posizione .arrow-general.arrow-right {
+	right: 20px;
+}
+.relative-title{
+	position: absolute;
+	right: 1%;
+	top: 70%;
+	color: white;
+}
+.relative-text{
+	position: absolute;
+	right: 1%;
+	top: 80%;
+	color: white;
+}
