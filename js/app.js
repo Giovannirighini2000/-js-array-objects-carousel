@@ -64,7 +64,16 @@ rightBtnElement.addEventListener('click', function () {
 		// aggiungiamo la classe active alla seconda slide
         prossimaSlide.classList.add('active');
         console.log('next slide', indiceSlideAttiva);
-    }
+		
+    }else{
+		let slideCorrente = slideElements[indiceSlideAttiva];
+        slideCorrente.classList.remove('active');
+        indiceSlideAttiva = 0;
+        let prossimaSlide = slideElements[indiceSlideAttiva];
+        prossimaSlide.classList.add('active');
+        console.log('next slide', indiceSlideAttiva);
+	}
+	
 });
 
 leftBtnElement.addEventListener('click', function () {
@@ -80,7 +89,17 @@ leftBtnElement.addEventListener('click', function () {
 		// aggiungiamo la classe active alla seconda slide
         prossimaSlide.classList.add('active');
         console.log('next slide', indiceSlideAttiva);
+		
     }
+	else{
+		let slideCorrente = slideElements[indiceSlideAttiva];
+        slideCorrente.classList.remove('active');
+        indiceSlideAttiva = 4;
+        let prossimaSlide = slideElements[indiceSlideAttiva];
+        prossimaSlide.classList.add('active');
+        console.log('next slide', indiceSlideAttiva);
+	}
+	
 });
 
 
