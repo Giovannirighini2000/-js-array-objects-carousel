@@ -64,7 +64,7 @@ rightBtnElement.addEventListener('click', function () {
 		// aggiungiamo la classe active alla seconda slide
         prossimaSlide.classList.add('active');
         console.log('next slide', indiceSlideAttiva);
-		
+		// LOOP
     }else{
 		let slideCorrente = slideElements[indiceSlideAttiva];
         slideCorrente.classList.remove('active');
@@ -90,7 +90,7 @@ leftBtnElement.addEventListener('click', function () {
         prossimaSlide.classList.add('active');
         console.log('next slide', indiceSlideAttiva);
 		
-    }
+    } // LOOP
 	else{
 		let slideCorrente = slideElements[indiceSlideAttiva];
         slideCorrente.classList.remove('active');
