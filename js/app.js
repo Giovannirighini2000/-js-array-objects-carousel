@@ -51,7 +51,10 @@ const slideElements = document.querySelectorAll('.carosello .slide');
 const rightBtnElement = document.querySelector('.arrow-general.arrow-right');
 const leftBtnElement = document.querySelector('.arrow-general.arrow-left');
 
-rightBtnElement.addEventListener('click', function () {
+rightBtnElement.addEventListener('click',nextSlide)
+leftBtnElement.addEventListener('click',leftSlide)
+
+function nextSlide() {
     console.log('current slide', indiceSlideAttiva);
     if (indiceSlideAttiva < 4) {
 
@@ -74,9 +77,9 @@ rightBtnElement.addEventListener('click', function () {
         console.log('next slide', indiceSlideAttiva);
 	}
 	
-});
+};
 
-leftBtnElement.addEventListener('click', function () {
+function leftSlide() {
     console.log('current slide', indiceSlideAttiva);
     if (indiceSlideAttiva > 0) {
 
@@ -100,7 +103,20 @@ leftBtnElement.addEventListener('click', function () {
         console.log('next slide', indiceSlideAttiva);
 	}
 	
-});
+};
 
 
+
+let autoplay = setInterval(nextSlide,3000)
+console.log(autoplay)
+
+carosello.addEventListener('mouseenter',()=>{
+    console.log('muose enter')
+    clearInterval(autoplay)
+    autoplay = undefined
+})
+carosello.addEventListener('mouseleave',()=>{
+    console.log('mouse leave')
+    autoplay=setInterval(nextSlide,3000)
+})
     
